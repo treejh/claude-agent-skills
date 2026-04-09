@@ -48,6 +48,7 @@ Claude Code와 AI 코딩 에이전트를 위한 **개발 워크플로우 스킬 
 | [dev](plugins/dev/) | `/dev-scan` | 코드베이스 탐색 + 기술 결정 분석 멀티에이전트 |
 | [session-wrap](plugins/session-wrap/) | "wrap up", "세션 마무리" | 5개 에이전트가 학습/자동화/문서/태스크 분석 |
 | [interactive-review](plugins/interactive-review/) | `/review` | 마크다운을 웹 UI로 인터랙티브 리뷰 |
+| [codex](plugins/codex/) | `/codex:review`, `/codex:rescue` | OpenAI Codex CLI 연동 — 코드 리뷰, 디버깅, 리팩토링 위임 |
 
 자세한 내용은 [plugins/README.md](plugins/README.md) 참고.
 
