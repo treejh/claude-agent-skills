@@ -40,6 +40,7 @@ Claude Code와 AI 코딩 에이전트를 위한 **개발 워크플로우 스킬 
 |--------|------|------|
 | [ccm](commands/ccm.md) | `/ccm` | 변경 파일을 기능 단위로 그룹화해서 Conventional Commit 생성 |
 | [cpr](commands/cpr.md) | `/cpr` | 브랜치 커밋 분석해서 한국어 PR 설명 작성 및 PR 생성 |
+| [code-review](commands/code-review.md) | `/code-review` | 5개 병렬 에이전트 PR 자동 리뷰 — 신뢰도 80+ 이슈만 한국어로 GitHub 코멘트 |
 
 자세한 내용은 [commands/README.md](commands/README.md) 참고.
 

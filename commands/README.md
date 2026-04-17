@@ -8,6 +8,7 @@ Claude Code slash command 모음. `~/.claude/commands/`에 설치해서 `/커맨
 # 전체 커맨드 설치
 ln -s ~/ai-agent-skills/commands/ccm.md ~/.claude/commands/ccm.md
 ln -s ~/ai-agent-skills/commands/cpr.md ~/.claude/commands/cpr.md
+ln -s ~/ai-agent-skills/commands/code-review.md ~/.claude/commands/code-review.md
 ```
 
 ---
@@ -57,6 +58,34 @@ fix: MDC roomCode 누락 수정 (#42)
 - WebSocket 스레드에서 MDC 전파 안 되던 문제 해결
 
 이대로 커밋을 진행할까요? (수정이 필요하면 말씀해 주세요)
+```
+
+---
+
+## code-review — PR 자동 코드 리뷰
+
+PR을 5개 병렬 에이전트가 독립적으로 검토하고, 신뢰도 80+ 이슈만 **한국어로** GitHub에 코멘트를 달아주는 커맨드.
+
+> 원본: `code-review@claude-plugins-official` (Boris Cherny, Anthropic)  
+> 커스텀: GitHub 코멘트를 한국어로 출력하도록 수정
+
+### 기능
+
+- 5개 에이전트 병렬 리뷰 (CLAUDE.md 준수, 버그, git 히스토리, 이전 PR 코멘트, 코드 주석)
+- 각 이슈 0-100 신뢰도 채점 → 80 미만 자동 필터링
+- 내 PR / 남의 PR 모두 가능
+- Draft·Closed·이미 리뷰한 PR은 자동 스킵
+
+### 사전 요구사항
+
+- [GitHub CLI (`gh`)](https://cli.github.com/) 설치 및 로그인
+- GitHub 저장소
+
+### 사용법
+
+```
+/code-review          ← 현재 브랜치 PR 자동 감지
+/code-review 123      ← PR 번호 지정
 ```
 
 ---
